@@ -1,19 +1,24 @@
-# Demo
+# To install
 
-To start your Phoenix server:
+```
+cd phx-tailwindcssjit
+asdf install # installs erlang + elixir
+npm install --prefix assets
+mix deps.get
+NODE_ENV=development mix phx.server
+visit http://0.0.0.0:4000
+```
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+# bug
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- Run server
+- Edit lib/demo_web/templates/page/index.html.eex (change `text-<color>-800`) and save
+- See page reload, text turns black (no color css generated)
+- Invalidate app.css hash (add blank line)
+- see new css
+- Edit template, continue to see new css
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+Also: sometimes there is a race condition between the CSS output and the hot
+reloader, sometimes you need to hard refresh the page.
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+https://elixirforum.com/t/using-the-tailwindcss-jit-compiler-with-phoenix/38531/8
