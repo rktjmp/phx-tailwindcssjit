@@ -37,3 +37,11 @@ Stop, Remove cache (`rm -rf assets/node_modules/.cache`)
 Start server again, all works without needing to muck with hashes.
 
 Can just remove hard source from webpack config without much issue.
+
+# setting up your existing phoenix project
+
+See
+https://github.com/rktjmp/phx-tailwindcssjit/compare/696a9b2a735c4a8a31c5579b3e6f55e79d442b76..HEAD
+for an overview of what changes you need to apply to your project to use
+tailwindcss-jit
+
