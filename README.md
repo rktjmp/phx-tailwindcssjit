@@ -1,3 +1,5 @@
+# This repo may be out dated, as JIT has moved to mainline. You may still need to apply the webpack hardsource fix (and don't forget to set your `mode: 'jit'` in your new config.
+
 # To install
 
 ```
